@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import HotList from '../../components/HotList/HotList'
+
 import './Youzan.css'
 
 class Youzan extends Component {
@@ -8,7 +10,10 @@ class Youzan extends Component {
 
   render() {
     return (
-      <p>This is youzan container</p>
+      <Fragment>
+        <p>This is youzan container</p>
+        <HotList />
+      </Fragment>
     )
   }
 }

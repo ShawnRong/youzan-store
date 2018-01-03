@@ -1,0 +1,65 @@
+.goods-item {
+  background: #fff
+}
+
+.goods-item .thumb {
+  margin-bottom: 6px;
+  text-align: center;
+  background-color: #f4f4f4;
+  position: relative
+}
+
+.goods-item .thumb:after {
+  content: " ";
+  display: block;
+  padding-top: 100%
+}
+
+.goods-item .thumb img {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 100%;
+  max-height: 100%
+}
+
+.goods-item .thumb .sell-out {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(/v2/image/yzapp/h5/2listicon_shouqing@2x.png) no-repeat 50%;
+  background-size: 40% auto;
+  background-color: rgba(0, 0, 0, .3)
+}
+
+.goods-item .thumb .sell-out-34 {
+  background-size: 34% auto
+}
+
+.goods-item .thumb .sell-out-50 {
+  background-size: 50% auto
+}
+
+.goods-item .thumb .sell-out-60 {
+  background-size: 60% auto
+}
+
+.goods-item .detail .title {
+  padding-bottom: 8px;
+  font-size: 12px;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+.goods-item .detail .price {
+  padding-bottom: 8px;
+  font-size: 14px;
+  color: #ff525e
+}
