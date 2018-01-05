@@ -4,5 +4,8 @@
     "es2015",
     "stage-0",
     "react-hmre"
+  ],
+  "plugins": [
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
   ]
 }

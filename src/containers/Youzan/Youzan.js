@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import HotList from '../../components/HotList/HotList'
+import Swiper from '../../components/Swiper/Swiper'
 
 import './Youzan.css'
 
@@ -11,7 +12,7 @@ class Youzan extends Component {
   render() {
     return (
       <Fragment>
-        <p>This is youzan container</p>
+        <Swiper />
         <HotList />
       </Fragment>
     )

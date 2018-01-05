@@ -1,0 +1,7 @@
+.ant-carousel .slick-slider {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.ant-carousel .slick-slider img {
+  width: 100%;
+}
