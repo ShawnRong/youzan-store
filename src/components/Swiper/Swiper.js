@@ -1,32 +1,21 @@
 import React, { Component } from 'react'
 import { Carousel } from 'antd';
+import { connect } from 'react-redux'
 
 import axios from 'axios'
+import { fetchBanner } from '../../store/actions'
 import url from '../../utility/utility'
 import './Swiper.css'
 
 class Swiper extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      bannerList: []
-    }
-  }
-
   componentWillMount() {
-    axios.get(url.banner)
-      .then(response => {
-        this.setState({
-          bannerList: response.data.lists
-        })
-      })
-
+    this.props.onLoadBannerList()
   }
 
   render(){
     return (
       <Carousel autoplay>
-        {this.state.bannerList.map(banner => (
+        {this.props.bannerList.map(banner => (
           <div>
             <img src={banner.image} />
           </div>
@@ -36,4 +25,16 @@ class Swiper extends Component {
   }
 }
 
-export default Swiper
+export const mapStateToProps = (state) => {
+  return {
+    bannerList: state.bannerList
+  }
+}
+
+export const mapDispatchToProps = dispatch => {
+  return {
+    onLoadBannerList: () => dispatch(fetchBanner())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Swiper)

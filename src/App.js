@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Route, Switch, withRouter, Redirect} from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import Layout from './containers/Layout/Layout'
 import BottomBar from './components/BottomBar/BottomBar'
