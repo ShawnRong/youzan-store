@@ -1,0 +1,54 @@
+.class-nav {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  background-color: #f4f4f4;
+}
+
+.inner-content {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.inner-content,
+.nav {
+  transition-timing-function: ease
+}
+
+.nav {
+  box-sizing: border-box;
+  float: left;
+  width: 82px;
+  font-size: 13px;
+  background-color: #f4f4f4;
+  text-align: left
+}
+
+.class-category,
+.class-nav {
+  height: 100%;
+  overflow: hidden
+}
+
+.nav .category-name {
+  position: relative;
+  padding: 20px 10px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #fff;
+  -o-border-image: url("https://b.yzcdn.cn/v2/image/wap/border-line.png") 2 stretch;
+  border-image: url("https://b.yzcdn.cn/v2/image/wap/border-line.png") 2 stretch;
+  border-bottom: 2px solid #e5e5e5
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min--moz-device-pixel-ratio:1.5),
+only screen and (min-device-pixel-ratio:1.5) {
+  .nav .category-name {
+    border-bottom-width: 1px
+  }
+}
+
+.nav .category-name.active {
+  background: #fff;
+  color: #fa6060
+}

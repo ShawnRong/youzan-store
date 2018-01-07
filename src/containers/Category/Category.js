@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+
+import Search from '../../components/Search/Search'
+import TopList from '../../components/TopList/TopList'
 
 const category = (props) => (
-  <p>This is categories</p>
+  <Fragment>
+    <Search />
+    <TopList />
+  </Fragment>
 )
 
 export default category

@@ -8,15 +8,15 @@ import url from '../../utility/utility'
 import './Swiper.css'
 
 class Swiper extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.onLoadBannerList()
   }
 
   render(){
     return (
       <Carousel autoplay>
-        {this.props.bannerList.map(banner => (
-          <div>
+        {this.props.bannerList.map((banner, idx) => (
+          <div key={idx}>
             <img src={banner.image} />
           </div>
         ))}
@@ -27,7 +27,7 @@ class Swiper extends Component {
 
 export const mapStateToProps = (state) => {
   return {
-    bannerList: state.bannerList
+    bannerList: state.youzan.bannerList
   }
 }
 

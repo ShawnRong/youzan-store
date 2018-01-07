@@ -12,7 +12,8 @@ module.exports = {
   entry: {
     app: "./index.js"
   },
-  devtool: 'cheap-module-eval-source-map',
+  // devtool: 'cheap-module-eval-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: '.',
     port: 1024,

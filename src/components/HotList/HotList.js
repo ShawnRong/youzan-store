@@ -52,7 +52,6 @@ class HotList extends Component {
       pageSize: this.state.pageSize
     })
     .then(response => {
-      console.log('load')
       lists = lists.concat(response.data.lists)
       this.setState({
         hotLists: lists,
