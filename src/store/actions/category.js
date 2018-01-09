@@ -53,3 +53,30 @@ export const fetchSubListFail = (error) => {
     error: error
   }
 }
+
+//Fetch ranklist
+export const fetchRankList = () => {
+  return {
+    type: actionTypes.FETCH_RANKLIST
+  }
+}
+
+export const fetchRankListStart = () => {
+  return {
+    type: actionTypes.FETCH_RANKLIST_START
+  }
+}
+
+export const fetchRankListSuccess = (ranklists) => {
+  return {
+    type: actionTypes.FETCH_RANKLIST_SUCCESS,
+    ranklists: ranklists
+  }
+}
+
+export const fetchRankListFail = (error) => {
+  return {
+    type: actionTypes.FETCH_RANKLIST_FAILED,
+    error: error
+  }
+}

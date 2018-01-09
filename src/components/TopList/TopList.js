@@ -1,18 +1,22 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 
-import { fetchTopList, fetchSubList } from '../../store/actions'
+import { fetchTopList, fetchSubList, fetchRankList} from '../../store/actions'
 import SubList from './SubList/SubList'
+import RankList from './RankList/RankList'
 import './TopList.css'
 
 class TopList extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      loadRankList: true
+    }
   }
 
   componentDidMount() {
     this.props.onLoadTopList()
-    this.props.onLoadSubList({id : '1'})
+    this.props.onLoadRankList()
   }
 
   onTopListClickHandler(event, id){
@@ -22,10 +26,25 @@ class TopList extends Component {
       child.classList.remove('active')
     }
     event.target.classList.add('active')
-    this.props.onLoadSubList({id : id})
+    if (id === -1) {
+      this.setState({
+        loadRankList: true
+      })
+    }else {
+      this.setState({
+        loadRankList: false
+      })
+      this.props.onLoadSubList({id : id})
+    }
   }
 
   render() {
+    let itemLists = null
+    if (this.state.loadRankList) {
+      itemLists = <RankList rankLists={this.props.rankLists}/>
+    } else {
+      itemLists = <SubList subLists={this.props.subLists}/>
+    }
     return (
     <Fragment>
       <div className="class-nav">
@@ -37,10 +56,8 @@ class TopList extends Component {
               </ul>
           </div>
       </div>
-      <SubList subLists={this.props.subLists}/>
+      {itemLists}
     </Fragment>
-
-
     )
   }
 }
@@ -48,14 +65,16 @@ class TopList extends Component {
 const mapStateToProps = state => {
   return {
     topLists: state.category.topList,
-    subLists: state.category.subLists
+    subLists: state.category.subLists,
+    rankLists: state.category.rankLists
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     onLoadTopList: () => dispatch(fetchTopList()),
-    onLoadSubList: (id) => dispatch(fetchSubList(id))
+    onLoadSubList: (id) => dispatch(fetchSubList(id)),
+    onLoadRankList: () => dispatch(fetchRankList())
   }
 }
 

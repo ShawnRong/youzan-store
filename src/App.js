@@ -7,6 +7,7 @@ import BottomBar from './components/BottomBar/BottomBar'
 import Youzan from './containers/Youzan/Youzan'
 import Category from './containers/Category/Category'
 import ShoppingCart from './containers/ShoppingCart/ShoppingCart'
+import Search from './containers/Search/Search'
 import User from './containers/User/User'
 
 import './css/common.css'
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path="/category" component={Category}/>
           <Route path="/shopping-cart" component={ShoppingCart}/>
           <Route path="/member" component={User}/>
+          <Route path="/search" component={Search}/>
           </Switch>
         </Layout>
       </div>
