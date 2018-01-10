@@ -14,7 +14,7 @@ const rankList = (props) => {
             </div>
             <ul>
               {props.rankLists.hotGoods? props.rankLists.hotGoods.map((hotGood, idx) => (
-                <li className="goods-item">
+                <li className="goods-item" key={hotGood.id}>
                   <a href="#">
                     <div className="thumb badge center-img">
                       <img src={hotGood.image}/>
@@ -40,15 +40,15 @@ const rankList = (props) => {
             </div>
             <ul>
               {props.rankLists.hotShops?props.rankLists.hotShops.map((hotShop, idx) => (
-                <li className="shop-item">
+                <li className="shop-item" key={hotShop.id}>
                   <div className="shop-title">
                     <span className="badge">{idx+1}</span>
                     <a href="#">{hotShop.name}</a>
                     <span className="follows"> / 关注度: {hotShop.follows}</span>
                   </div>
                   <ul className="shop-images">
-                    {hotShop.images.map(image => (
-                      <li>
+                    {hotShop.images.map((image, idx) => (
+                      <li key={idx}>
                         <a href="#"><img src={image} /></a>
                       </li>
                     ))
@@ -64,8 +64,8 @@ const rankList = (props) => {
             </div>
             <ul className="keywords-list">
               { props.rankLists.hotKeywords ?
-                props.rankLists.hotKeywords.map(keyword => (
-                  <li><a href="#" className="hot-keyword">{keyword}</a></li>
+                props.rankLists.hotKeywords.map((keyword, idx) => (
+                  <li key={idx}><a href="#" className="hot-keyword">{keyword}</a></li>
                 )): null
               }
             </ul>

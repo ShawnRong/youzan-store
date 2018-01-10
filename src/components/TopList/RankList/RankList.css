@@ -1,15 +1,19 @@
-.hot-goods {
+.hot-wrap {
+  margin-left: 15px;
+}
+
+#scroll-main-content .hot-goods {
   position: relative
 }
 
-.hot-goods .goods-item {
+#scroll-main-content .hot-goods .goods-item {
   display: block;
   position: relative;
   width: auto;
   margin-bottom: 12px
 }
 
-.hot-goods .goods-item .thumb {
+#scroll-main-content .hot-goods .goods-item .thumb {
   float: left;
   position: relative;
   width: 90px;
@@ -17,7 +21,7 @@
   margin: 0
 }
 
-.hot-goods .goods-item .badge:before {
+#scroll-main-content .hot-goods .goods-item .badge:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,7 +43,7 @@
   z-index: 2
 }
 
-.hot-goods .goods-item .detail {
+#scroll-main-content .hot-goods .goods-item .detail {
   margin-left: 100px;
   height: 90px;
   font-size: 12px;
@@ -84,7 +88,8 @@ only screen and (min-device-pixel-ratio:1.5) {
   font-size: 14px;
   line-height: 1.5;
   padding: 8px 8px 8px 0;
-  zoom: 1
+  zoom: 1;
+  background-color: #fff;
 }
 
 .hot-title:after {
@@ -274,11 +279,8 @@ only screen and (min-device-pixel-ratio:1.5) {
   overflow: hidden
 }
 
-.hot-shop-wrap {
-  background-color: #f4f4f4
-}
 
-.hot-shop-wrap .avatar {
+.hot-shops .avatar {
   position: relative;
   float: left;
   width: 56px;
@@ -288,7 +290,7 @@ only screen and (min-device-pixel-ratio:1.5) {
   z-index: 995
 }
 
-.hot-shop-wrap .avatar img {
+.hot-shops .avatar img {
   position: absolute;
   top: 0;
   left: 0;
@@ -299,49 +301,49 @@ only screen and (min-device-pixel-ratio:1.5) {
   margin: auto
 }
 
-.hot-shop-wrap .info {
+.hot-shops .info {
   height: 56px;
   margin-left: 66px
 }
 
-.hot-shop-wrap .shop-name {
+.hot-shops .shop-name {
   font-size: 14px;
   padding-top: 12px;
   position: relative;
   height: 18px
 }
 
-.hot-shop-wrap .shop-name .name {
+.hot-shops .shop-name .name {
   float: left;
   margin-right: 10px
 }
 
-.hot-shop-wrap .follows {
+.hot-shops .follows {
   padding-top: 5px;
   margin-left: 0
 }
 
-.hot-shop-wrap .shop-item {
-  padding: 12px;
+.hot-shops .shop-item {
+  padding: 12px 12px 12px 0;
   background-color: #fff;
   margin-bottom: 10px
 }
 
-.hot-shop-wrap .shop-item:last-child {
+.hot-shops .shop-item:last-child {
   margin-bottom: 0
 }
 
-.hot-shop-wrap .shop-images {
+.hot-shops .shop-images {
   margin-right: 0
 }
 
-.hot-shop-wrap .shop-images li {
+.hot-shops .shop-images li {
   border: 1px solid #efefef
 }
 
-.hot-shop-wrap .icon-top1,
-.hot-shop-wrap .icon-top2,
-.hot-shop-wrap .icon-top3 {
+.hot-shops .icon-top1,
+.hot-shops .icon-top2,
+.hot-shops .icon-top3 {
   display: inline-block;
   width: 34px;
   height: 15px;
@@ -349,11 +351,11 @@ only screen and (min-device-pixel-ratio:1.5) {
   background-size: 100% auto
 }
 
-.hot-shop-wrap .icon-top2 {
+.hot-shops .icon-top2 {
   background-image: url("/v2/image/yzapp/h5/TOP2@2x.png")
 }
 
-.hot-shop-wrap .icon-top3 {
+.hot-shops .icon-top3 {
   background-image: url("/v2/image/yzapp/h5/TOP3@2x.png")
 }
 

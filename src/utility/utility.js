@@ -7,7 +7,8 @@ const url = {
   searchList: '/search/list'
 }
 
-const host = 'http://rapapi.org/mockjsdata/24170'
+// const host = 'http://rapapi.org/mockjsdata/24170'
+const host = 'https://www.easy-mock.com/mock/5a55a620084b71108ca0cf6d'
 
 for(let key in url) {
   if (url.hasOwnProperty(key)) {

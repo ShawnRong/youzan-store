@@ -86,7 +86,7 @@
 .shop-item {
   position: relative;
   display: inline-block;
-  width: 33.333%
+  width: 100%;
 }
 
 .shop-item:before {

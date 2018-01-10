@@ -74,7 +74,7 @@ class HotList extends Component {
         <ul className="js-list js-lazy">
           {this.state.hotLists.map((list, idx) =>(
             <li key={idx}>
-              <GoodItem imgSrc={list.img} title={list.name} price={list.price}/>
+              <GoodItem imgSrc={list.img} title={list.title} price={'￥'+list.price}/>
             </li>
           ))}
         </ul>

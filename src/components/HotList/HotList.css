@@ -4,9 +4,7 @@
 
 .hot-goods ul {
   position: relative;
-  padding: 0 6px;
   zoom: 1;
-  margin-bottom: 60px;
 }
 
 .hot-goods ul:after {

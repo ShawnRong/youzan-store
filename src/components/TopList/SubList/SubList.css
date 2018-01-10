@@ -1,8 +1,9 @@
 .class-category {
-  margin-left: 96px;
+  margin-left: 82px;
   margin-top: 45px;
   padding-top: 11px;
   box-sizing: border-box;
+  background-color: #fff;
 }
 
 .inner-content {

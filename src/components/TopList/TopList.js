@@ -26,10 +26,11 @@ class TopList extends Component {
       child.classList.remove('active')
     }
     event.target.classList.add('active')
-    if (id === -1) {
+    if (parseInt(id) === -1) {
       this.setState({
         loadRankList: true
       })
+      this.props.onLoadRankList()
     }else {
       this.setState({
         loadRankList: false
@@ -50,9 +51,18 @@ class TopList extends Component {
       <div className="class-nav">
           <div id="scroll-nav" style={{height: "100%"}}>
               <ul className="nav" id="scroll-nav-content" style={{height: "540px", transform: "translate3d(0px, 0px, 0px)"}}>
-                  {this.props.topLists.map(topList => (
-                    <li className="category-name js-category-name" data-cid={topList.id} key={topList.id} onClick={(event) => this.onTopListClickHandler(event, topList.id)}>{topList.name}</li>
-                  ))}
+                  {this.props.topLists.map(topList => {
+                    if (topList.id === '-1') {
+                      return (
+                        <li className="category-name js-category-name active" data-cid={topList.id} key={topList.id} onClick={(event) => this.onTopListClickHandler(event, topList.id)}>{topList.name}</li>
+                      )
+                    } else {
+                      return (
+                        <li className="category-name js-category-name" data-cid={topList.id} key={topList.id} onClick={(event) => this.onTopListClickHandler(event, topList.id)}>{topList.name}</li>
+                      )
+                    }
+                  }
+                  )}
               </ul>
           </div>
       </div>
