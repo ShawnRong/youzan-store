@@ -17,6 +17,16 @@ class searchInput extends Component {
     };
   }
 
+  componentDidMount() {
+    if (this.props.location.search) {
+      const keyword = this.props.location.search.match(/keyword=([^&#]*)/)[1];
+      this.setState({
+        keyword: keyword
+      });
+      this.props.onLoadSearchResult({ keyword: keyword });
+    }
+  }
+
   onSearchClickHandler() {
     if (this.props.location.pathname !== "/search") {
       this.props.history.push("/search");
