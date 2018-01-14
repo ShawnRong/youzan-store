@@ -1,5 +1,6 @@
 .hot-goods {
-  overflow: hidden
+  overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .hot-goods ul {
@@ -10,31 +11,31 @@
 .hot-goods ul:after {
   content: "";
   display: table;
-  clear: both
+  clear: both;
 }
 
 .hot-goods li {
   float: left;
   width: 50%;
   box-sizing: border-box;
-  padding-bottom: 6px
+  padding-bottom: 6px;
 }
 
 .hot-goods li:nth-child(odd) {
-  padding-right: 3px
+  padding-right: 3px;
 }
 
 .hot-goods li:nth-child(2n) {
-  padding-left: 3px
+  padding-left: 3px;
 }
 
 .hot-goods li .goods-item .thumb {
   margin-bottom: 10px;
-  background-color: #fff
+  background-color: #fff;
 }
 
 .hot-goods li .goods-item .detail {
-  padding: 0 8px 1px
+  padding: 0 8px 1px;
 }
 
 .hot-goods li .goods-item .title {
@@ -48,5 +49,5 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical
+  -webkit-box-orient: vertical;
 }

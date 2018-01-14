@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
-import Search from '../../components/Search/Search'
-import TopList from '../../components/TopList/TopList'
+import SearchInput from "../../components/Search/SearchInput/SearchInput";
+import TopList from "../../components/TopList/TopList";
 
-const category = (props) => (
+const category = props => (
   <Fragment>
-    <Search />
+    <SearchInput />
     <TopList />
   </Fragment>
-)
+);
 
-export default category
+export default category;

@@ -3,7 +3,7 @@ export {
   fetchBannerListSuccess,
   fetchBannerListFail,
   fetchBanner
-} from  './youzan'
+} from "./youzan";
 
 export {
   fetchTopList,
@@ -18,4 +18,11 @@ export {
   fetchRankListStart,
   fetchRankListSuccess,
   fetchRankListFail
-} from './category.js'
+} from "./category.js";
+
+export {
+  fetchSearchResult,
+  fetchSearchResultStart,
+  fetchSearchResultSuccess,
+  fetchSearchResultFail
+} from "./search.js";

@@ -1,26 +1,33 @@
-import React, { Component } from 'react'
-import './Search.css'
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
-class Search extends Component{
-  constructor(props){
-    super(props)
-    this.onSearchClickHandler = this.onSearchClickHandler.bind(this)
-  }
+import SearchList from "./SearchList/SearchList";
+import SearchInput from "./SearchInput/SearchInput";
+import "./Search.css";
 
-  onSearchClickHandler(){
-    console.log('search')
-  }
-
-  render(){
+class Search extends Component {
+  render() {
     return (
-      <div className="custom-search js-search-bar">
-        <form>
-            <input type="search" onClick={this.onSearchClickHandler} className="custom-search-input" autoComplete="off" name="keyword" value="" placeholder="搜索更赞的商品"/>
-            <span className="icon-custom-search"></span>
-        </form>
+      <div className="search-wrap">
+        <SearchInput />
+        <div className="searchLists">
+          <ul className="list">
+            {this.props.searchResult
+              ? this.props.searchResult.map(item => (
+                  <SearchList result={item} key={item.id} />
+                ))
+              : null}
+          </ul>
+        </div>
       </div>
-    )
+    );
   }
 }
 
-export default Search
+export const mapStateToProps = state => {
+  return {
+    searchResult: state.search.searchResult
+  };
+};
+
+export default connect(mapStateToProps)(Search);

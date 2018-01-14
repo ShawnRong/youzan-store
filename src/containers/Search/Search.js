@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Search from "../../components/Search/Search";
 
-const search = (props) => (
-  <p> Search component</p>
-)
+const search = props => (
+  <div>
+    <Search />
+  </div>
+);
 
-export default search
+export default search;
