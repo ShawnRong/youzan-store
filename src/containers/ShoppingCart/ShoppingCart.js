@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const shoppingCart = (props) => (
-  <p>This is shopping cart</p>
-)
+import withBottomBar from "../../hoc/withBottomBar";
 
-export default shoppingCart
+const shoppingCart = props => <p>This is shopping cart</p>;
+
+export default withBottomBar(shoppingCart);

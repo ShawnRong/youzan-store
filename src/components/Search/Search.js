@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 
 import SearchList from "./SearchList/SearchList";
 import SearchInput from "./SearchInput/SearchInput";
@@ -30,4 +31,4 @@ export const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Search);
+export default withRouter(connect(mapStateToProps)(Search));

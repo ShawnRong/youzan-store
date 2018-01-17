@@ -1,0 +1,389 @@
+.goods-header {
+  display: block;
+  height: auto;
+  padding: 10px 0 0;
+  -webkit-tap-highlight-color: transparent;
+  border-top: 1px solid #f2f2f2;
+  background-color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.goods-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  top: auto;
+  height: 1px;
+  width: 100%;
+  background-color: #e5e5e5;
+  display: block;
+  z-index: 15;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  .goods-header::after {
+    -webkit-transform: scaleY(0.5);
+    -moz-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+
+.goods-header.restore {
+  border-top-color: transparent;
+  background-color: #fff;
+}
+
+.goods-header.restore .thumb {
+  display: block;
+}
+
+.goods-header.restore .title {
+  padding-right: 5px;
+}
+
+.goods-header .thumb {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #eee;
+  float: left;
+  margin: 2px 0 0 10px;
+}
+
+.goods-header .thumb > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.goods-header .title {
+  font-weight: normal;
+  margin: 0;
+  padding: 0 10px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.goods-header .wish-add {
+  position: relative;
+  margin-top: -1px;
+  margin-right: 11px;
+  padding-left: 18px;
+  height: 12px;
+  line-height: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.goods-header .wish-add:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAilBMVEUAAAD/ZwD/dAD/cAD/nQD/ZgD/ZwD/ZgD/ZwD/ZwD/aAD/ZgD/ZgD/aQD/aAD/agD/ZwD/ZgD/ZwD/ZgD/ZwD/ZwD/ZgD/ZgD/ZwD/aAD/bAD/ZwD/ZgD/ZgD/ZgD/ZgD/ZgD/ZwD/ZgD/ZgD/ZgD/agD/awD/ZgD/ZgD/ZwD/ZwD/ZgD/ZwD/ZgB8I7uZAAAALXRSTlMA+wYLAthR4n5rSfHpMSYc+O7MwbmpoXJgOBH13dTGvrORioNXGBPQpZqLQT4TqzsCAAAA00lEQVQY022P544DIRCDB1hgyfZe0utVv//rHbegKAn5fln2WBqTJetktTvPVvFhn+h2RY4TFlJFk3TywMkSozzn86oFGxJ8qFthUhysX5TMVWMAn8tpnsJa3+jJ0aPmThk0RA1+ycEvwivB1hGluFKARkEJRBhI5FQjC/yoZJw6mCDIoIkUNtFr0ONoaxLDa4Gxgv4rbuGdq8bRT16rBz/fovFDv4ATJ4+qsL2RxzDocXlh2gPdw7CpBuQoflqgMs+TLhJgQBKLYO24wyae6R1Px3+0jbjgo/lX3gAAAABJRU5ErkJggg==)
+    no-repeat;
+  background-size: 12px 10px;
+}
+
+.goods-header .wish-added {
+  background-color: #f30;
+  color: #fff;
+}
+
+.goods-header .wish-added::before {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAbFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8+T+BWAAAAI3RSTlMA99uX+fEK++vTk4opIBwZ5eDXtoWCcWNbOBLKuLeje3lLMTUPnhkAAACOSURBVBjTdc5XDoMwEADRAYPpvZMe3/+OcRAgkmze10ojexcrU1EYxSnWU9V+FGcshsC8eTfo1nHAGs0mVtsUjKBDIwg1vRH1XOTQ4MrBxZGD8/9FI4cznRxaCnGJl4OSwhWYhfVlgZX6P7dOLKbSfPAfrPKTOahTdvru798kmqM5cZYzVcG3vK2qJGPzAqh0LxJZYtS6AAAAAElFTkSuQmCC);
+}
+
+.main-btn::after,
+.vice-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-btn {
+  background-color: #f44;
+  color: #fff;
+}
+
+.main-btn::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.main-btn:active {
+  background: #ff1b1b;
+}
+
+.vice-btn {
+  background-color: #f85;
+  color: #fff;
+}
+
+.vice-btn::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.vice-btn:active {
+  background: #ff6b2c;
+}
+
+.current-price,
+.price-sub {
+  color: #f44 !important;
+}
+
+.goods-detail .tabber {
+  color: #f44;
+  border-bottom: 1px solid #f44;
+}
+
+.goods-detail .tabber .item button.active {
+  color: #fff;
+}
+
+.goods-detail .tabber button.active {
+  color: #f44;
+  border-bottom: 1px solid #f44;
+}
+
+.commit-bill-btn,
+.pay-bill-btn,
+.sku-layout .sku-list-container .active {
+  background-color: #f44;
+  border-color: #f44;
+}
+
+.trade-review-list .review-rate-tabber button.active {
+  background-color: #f44;
+}
+
+.sku-layout .current-price .price-name,
+.sku-layout .current-price i {
+  color: #f44 !important;
+}
+
+.sku-layout .other-info .quota {
+  color: #f44;
+}
+
+.theme-price-color {
+  color: #f44 !important;
+}
+
+.sc-goods-list .info p.goods-price > em,
+.service .icon-service {
+  color: #f44;
+}
+
+.goods-price {
+  padding: 10px 10px 2px;
+  text-align: left;
+}
+
+.goods-price i {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  vertical-align: baseline;
+}
+
+.goods-price em {
+  color: #999;
+  font-style: normal;
+}
+
+.goods-price.goods-has-wish {
+  margin-right: 75px;
+}
+
+.current-price {
+  color: #f60;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.current-price > span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.current-price .price {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.current-price.activity-price {
+  color: #ed5050;
+}
+
+.current-price span {
+  font-size: 16px;
+}
+
+.price-tag {
+  background: #fa3232;
+  color: #fff;
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 12px;
+  line-height: 16px;
+  vertical-align: middle;
+}
+
+.old-price {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.original-price {
+  text-decoration: line-through;
+  vertical-align: middle;
+  color: #999;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  display: block;
+}
+
+.content-body hr {
+  margin: 0;
+  border: 0 none;
+  position: relative;
+}
+
+.content-body hr::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  top: auto;
+  height: 1px;
+  width: 100%;
+  background-color: #e5e5e5;
+  display: block;
+  z-index: 15;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  .content-body hr::after {
+    -webkit-transform: scaleY(0.5);
+    -moz-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+
+.content-body hr.with-margin-l {
+  margin-left: 10px;
+}
+
+.stock-detail {
+  position: relative;
+  line-height: 12px;
+  font-size: 0;
+  color: #999;
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+.stock-detail dl {
+  width: 33.333333%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 12px;
+  zoom: 1;
+}
+
+.stock-detail dl:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.stock-detail dl:nth-child(1) {
+  text-align: left;
+}
+
+.stock-detail dl:nth-child(2) {
+  text-align: center;
+}
+
+.stock-detail dl:nth-child(3) {
+  text-align: right;
+}
+
+.stock-detail dt {
+  display: inline-block;
+}
+
+.stock-detail dt em,
+.stock-detail dt label {
+  color: #999;
+}
+
+.stock-detail dd {
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.goods-header hr {
+  border-top: 0px !important;
+}

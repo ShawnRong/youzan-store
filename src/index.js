@@ -9,10 +9,12 @@ import App from "./App";
 import youzanReducer from "./store/reducers/youzan";
 import categoryReducer from "./store/reducers/category";
 import searchReducer from "./store/reducers/search";
+import goodsReducer from "./store/reducers/goods";
 import {
   youZanPageLoad,
   categoryPageLoad,
-  searchContentLoad
+  searchContentLoad,
+  goodsContentLoad
 } from "./store/sagas";
 
 const sagaMiddleware = createSagaMiddlreware();
@@ -24,7 +26,8 @@ const sagaMiddleware = createSagaMiddlreware();
 const rootReducer = combineReducers({
   youzan: youzanReducer,
   category: categoryReducer,
-  search: searchReducer
+  search: searchReducer,
+  goods: goodsReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -36,6 +39,7 @@ const store = createStore(
 sagaMiddleware.run(youZanPageLoad);
 sagaMiddleware.run(categoryPageLoad);
 sagaMiddleware.run(searchContentLoad);
+sagaMiddleware.run(goodsContentLoad);
 
 ReactDOM.render(
   <Provider store={store}>

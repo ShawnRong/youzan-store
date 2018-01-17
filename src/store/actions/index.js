@@ -26,3 +26,14 @@ export {
   fetchSearchResultSuccess,
   fetchSearchResultFail
 } from "./search.js";
+
+export {
+  fetchGoodsDetail,
+  fetchGoodsDetailStart,
+  fetchGoodsDetailSuccess,
+  fetchGoodsDetailFail,
+  fetchDealList,
+  fetchDealListStart,
+  fetchDealListSuccess,
+  fetchDealListFail
+} from "./goods.js";

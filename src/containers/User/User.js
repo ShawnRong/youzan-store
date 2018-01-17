@@ -1,5 +1,6 @@
 import React from "react";
 
+import withBottomBar from "../../hoc/withBottomBar";
 import "./User.css";
 
 const user = props => (
@@ -157,4 +158,4 @@ const user = props => (
   </div>
 );
 
-export default user;
+export default withBottomBar(user);

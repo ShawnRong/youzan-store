@@ -1,19 +1,21 @@
 const url = {
-  hotLists: '/index/hotLists',
-  banner: '/index/banner',
-  topList: '/category/topList',
-  subList: '/category/subList',
-  rank: '/category/rank',
-  searchList: '/search/list'
-}
+  hotLists: "/index/hotLists",
+  banner: "/index/banner",
+  topList: "/category/topList",
+  subList: "/category/subList",
+  rank: "/category/rank",
+  searchList: "/search/list",
+  goodsdetail: "/goods/details",
+  deallist: "/goods/deal"
+};
 
 // const host = 'http://rapapi.org/mockjsdata/24170'
-const host = 'https://www.easy-mock.com/mock/5a55a620084b71108ca0cf6d'
+const host = "https://www.easy-mock.com/mock/5a55a620084b71108ca0cf6d";
 
-for(let key in url) {
+for (let key in url) {
   if (url.hasOwnProperty(key)) {
-    url[key] = host + url[key]
+    url[key] = host + url[key];
   }
 }
 
-export default url
+export default url;
