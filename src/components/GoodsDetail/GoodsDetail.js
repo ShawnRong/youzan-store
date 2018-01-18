@@ -4,7 +4,9 @@ import { fetchGoodsDetail, fetchDealList } from "../../store/actions";
 
 import GoodsSwiper from "./GoodsSwiper/GoodsSwiper";
 import GoodeDesc from "./GoodsDesc/GoodsDesc";
+import GoodsSelect from "./GoodsSelect/GoodsSelect";
 import GoodsStore from "./GoodsStore/GoodsStore";
+import GoodsTab from "./GoodsTab/GoodsTab";
 import GoodsFooter from "./GoodsFooter/GoodsFooter";
 import GoodsRecommend from "./GoodsRecommend/GoodsRecommend";
 
@@ -23,7 +25,9 @@ class GoodsDetail extends Component {
       <div>
         <GoodsSwiper />
         <GoodeDesc />
+        <GoodsSelect />
         <GoodsStore />
+        <GoodsTab />
         <GoodsFooter />
         <GoodsRecommend />
       </div>

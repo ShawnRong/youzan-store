@@ -1,0 +1,163 @@
+.tabber button,
+.tabber a {
+  float: left;
+  width: 50%;
+  line-height: 40px;
+  border: 0px none;
+  outline: 0px none;
+  background-color: #fff;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.price-intro {
+  height: 44px;
+  overflow: hidden;
+  padding-left: 15px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.price-intro.js-unfold {
+  height: auto;
+}
+
+.price-intro.js-unfold > h4 {
+  border-bottom: 1px solid #eee;
+}
+
+.price-intro.js-unfold .icon-arrow {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.price-intro .icon-arrow {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 17px;
+  right: 10px;
+}
+
+.price-intro > h4 {
+  position: relative;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+}
+
+.price-intro > p {
+  margin: 15px 15px 15px 0;
+  line-height: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+.block-list-traderecord {
+  padding-left: 0;
+  margin-bottom: 30px;
+  background-color: #fff;
+  width: 100%;
+  border-top: 0px none;
+}
+
+.block-list-traderecord.empty .list-finished {
+  padding: 90px 10px;
+  font-size: 14px;
+}
+
+.block-list-traderecord.empty .b-list {
+  display: none;
+}
+
+.block-list-traderecord .list-header,
+.block-list-traderecord .block-item {
+  display: table;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.block-list-traderecord .list-header span,
+.block-list-traderecord .block-item span {
+  display: table-cell;
+  font-size: 12px;
+}
+
+.block-list-traderecord .list-header .col-1,
+.block-list-traderecord .block-item .col-1 {
+  width: 34%;
+}
+
+.block-list-traderecord .list-header .col-2,
+.block-list-traderecord .block-item .col-2 {
+  width: 33%;
+}
+
+.block-list-traderecord .list-header .col-3,
+.block-list-traderecord .block-item .col-3 {
+  width: 33%;
+}
+
+.block-list-traderecord .list-header {
+  padding: 0 10px;
+  height: 33px;
+  line-height: 33px;
+  background-color: #f2f2f2;
+  -webkit-border-image: url("https://b.yzcdn.cn/v2/image/wap/border-line-2.png")
+    2 stretch;
+  -moz-border-image: url("https://b.yzcdn.cn/v2/image/wap/border-line-2.png") 2
+    stretch;
+  border-image: url("https://b.yzcdn.cn/v2/image/wap/border-line-2.png") 2
+    stretch;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  .block-list-traderecord .list-header {
+    border-bottom-width: 1px;
+  }
+}
+
+.block-list-traderecord .list-header .col-1 {
+  text-indent: 12px;
+}
+
+.block-list-traderecord .b-list {
+  border-top: 0px none;
+}
+
+.block-list-traderecord .b-list .block-item.header {
+  background-color: #f2f2f2;
+}
+
+.block-list-traderecord .b-list .col-1 {
+  text-indent: 5px;
+}
+
+.center,
+.text-center {
+  text-align: center;
+}

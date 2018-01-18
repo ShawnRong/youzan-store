@@ -634,10 +634,6 @@
   }
 }
 
-.sc-goods-list.pic .goods-card.small-pic.card .photo-block img {
-  max-height: 100%;
-}
-
 .sc-goods-list.pic .goods-card.small-pic.card .info {
   min-height: 25px;
 }
