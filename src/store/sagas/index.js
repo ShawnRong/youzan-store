@@ -5,6 +5,7 @@ import { fetchBannerList } from "./youzan";
 import { fetchTopList, fetchSubList, fetchRankList } from "./category";
 import { fetchSearchResult } from "./search";
 import { fetchGoodsDetail, fetchDealList } from "./goods";
+import { fetchAddressList } from "./address";
 
 export function* youZanPageLoad() {
   yield takeEvery(actionTypes.FETCH_BANNER_LIST, fetchBannerList);
@@ -23,4 +24,8 @@ export function* searchContentLoad() {
 export function* goodsContentLoad() {
   yield takeEvery(actionTypes.FETCH_GOODS_DETAIL, fetchGoodsDetail);
   yield takeEvery(actionTypes.FETCH_DEALLIST, fetchDealList);
+}
+
+export function* addressLoad() {
+  yield takeEvery(actionTypes.FETCH_ADDRESSLIST, fetchAddressList);
 }

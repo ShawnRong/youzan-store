@@ -6,7 +6,8 @@ const url = {
   rank: "/category/rank",
   searchList: "/search/list",
   goodsdetail: "/goods/details",
-  deallist: "/goods/deal"
+  deallist: "/goods/deal",
+  addresslist: "/address/list"
 };
 
 // const host = 'http://rapapi.org/mockjsdata/24170'

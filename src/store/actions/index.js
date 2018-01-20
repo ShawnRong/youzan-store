@@ -37,3 +37,10 @@ export {
   fetchDealListSuccess,
   fetchDealListFail
 } from "./goods.js";
+
+export {
+  fetchAddressList,
+  fetchAddressListStart,
+  fetchAddressListSuccess,
+  fetchAddressListFail
+} from "./address.js";

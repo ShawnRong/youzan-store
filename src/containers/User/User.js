@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import withBottomBar from "../../hoc/withBottomBar";
 import "./User.css";
@@ -142,9 +143,12 @@ const user = props => (
           </a>
         </div>
         <div className="block block-list list-vertical">
-          <a className="block-item link clearfix ico-setting js-login">
+          <Link
+            className="block-item link clearfix ico-setting js-login"
+            to="/address"
+          >
             <p className="title-info c-black font-size-14">收货地址管理</p>
-          </a>
+          </Link>
           <a
             className="block-item link clearfix ico-help"
             href="http://bbs.youzan.com/home.php?mod=space&amp;do=thread&amp;view=me&amp;order=lastpost&amp;mobile=2&amp;fid=85&amp;filter=common&amp;in_app_type=weixin"

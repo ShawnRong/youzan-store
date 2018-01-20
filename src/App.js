@@ -9,6 +9,8 @@ import ShoppingCart from "./containers/ShoppingCart/ShoppingCart";
 import Search from "./containers/Search/Search";
 import User from "./containers/User/User";
 import Goods from "./containers/Goods/Goods";
+import Address from "./components/Address/Address";
+import AddressForm from "./components/Address/AddressForm/AddressForm";
 
 import "./css/common.css";
 
@@ -24,6 +26,8 @@ class App extends Component {
           <Route path="/member" component={User} />
           <Route path="/search" component={Search} />
           <Route path="/goods" component={Goods} />
+          <Route path="/address/add" exact component={AddressForm} />
+          <Route path="/address" component={Address} />
         </Switch>
       </div>
     );
