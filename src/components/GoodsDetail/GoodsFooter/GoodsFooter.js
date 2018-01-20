@@ -2,7 +2,7 @@ import React from "react";
 
 import "./GoodsFooter.css";
 
-const goodsFooter = () => (
+const goodsFooter = props => (
   <div>
     <div className="js-bottom-opts js-footer-auto-ele stick-bottom">
       <div className="stick-bottom-icons">
@@ -24,7 +24,7 @@ const goodsFooter = () => (
           <a className="js-add-cart">加入购物车</a>
         </div>
         <div className="btn-buy">
-          <a href="javascript:;" className="js-buy-it">
+          <a href="javascript:;" className="js-buy-it" onClick={props.open}>
             立即购买
           </a>
         </div>

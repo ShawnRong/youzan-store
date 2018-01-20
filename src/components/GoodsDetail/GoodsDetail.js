@@ -9,10 +9,16 @@ import GoodsStore from "./GoodsStore/GoodsStore";
 import GoodsTab from "./GoodsTab/GoodsTab";
 import GoodsFooter from "./GoodsFooter/GoodsFooter";
 import GoodsRecommend from "./GoodsRecommend/GoodsRecommend";
+import GoodsToBuy from "./GoodsToBuy/GoodsToBuy";
 
 class GoodsDetail extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      onGoodsToBuyOpen: false
+    };
+    this.onBuyClickHandler = this.onBuyClickHandler.bind(this);
+    this.onBuyClickCloseHandler = this.onBuyClickCloseHandler.bind(this);
   }
 
   componentDidMount() {
@@ -20,15 +26,31 @@ class GoodsDetail extends Component {
     this.props.onLoadDealList({ id: this.props.id });
   }
 
+  onBuyClickHandler() {
+    this.setState({
+      onGoodsToBuyOpen: true
+    });
+  }
+
+  onBuyClickCloseHandler() {
+    this.setState({
+      onGoodsToBuyOpen: false
+    });
+  }
+
   render() {
     return (
       <div>
         <GoodsSwiper />
         <GoodeDesc />
-        <GoodsSelect />
+        <GoodsSelect clicked={this.onBuyClickHandler} />
+        <GoodsToBuy
+          open={this.state.onGoodsToBuyOpen}
+          close={this.onBuyClickCloseHandler}
+        />
         <GoodsStore />
         <GoodsTab />
-        <GoodsFooter />
+        <GoodsFooter open={this.onBuyClickHandler} />
         <GoodsRecommend />
       </div>
     );

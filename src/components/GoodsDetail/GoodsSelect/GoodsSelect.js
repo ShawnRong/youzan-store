@@ -2,8 +2,8 @@ import React from "react";
 
 import "./GoodsSelect.css";
 
-const goodsSelect = () => (
-  <div className="sku-detail adv-opts">
+const goodsSelect = props => (
+  <div className="sku-detail adv-opts" onClick={props.clicked}>
     <div className="sku-detail-inner adv-opts-inner">
       <dl className="sku-group select-sku js-select-sku">
         <dt>
