@@ -6,6 +6,7 @@ import { fetchTopList, fetchSubList, fetchRankList } from "./category";
 import { fetchSearchResult } from "./search";
 import { fetchGoodsDetail, fetchDealList } from "./goods";
 import { fetchAddressList } from "./address";
+import { fetchShoppingCart } from "./cart";
 
 export function* youZanPageLoad() {
   yield takeEvery(actionTypes.FETCH_BANNER_LIST, fetchBannerList);
@@ -28,4 +29,8 @@ export function* goodsContentLoad() {
 
 export function* addressLoad() {
   yield takeEvery(actionTypes.FETCH_ADDRESSLIST, fetchAddressList);
+}
+
+export function* shoppingCartLoad() {
+  yield takeEvery(actionTypes.FETCH_SHOPPING_CART, fetchShoppingCart);
 }

@@ -7,7 +7,8 @@ const url = {
   searchList: "/search/list",
   goodsdetail: "/goods/details",
   deallist: "/goods/deal",
-  addresslist: "/address/list"
+  addresslist: "/address/list",
+  shoppingcart: "/cart/list"
 };
 
 // const host = 'http://rapapi.org/mockjsdata/24170'

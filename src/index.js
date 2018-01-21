@@ -11,12 +11,14 @@ import categoryReducer from "./store/reducers/category";
 import searchReducer from "./store/reducers/search";
 import goodsReducer from "./store/reducers/goods";
 import addressReducer from "./store/reducers/address";
+import cartReducer from "./store/reducers/cart";
 import {
   youZanPageLoad,
   categoryPageLoad,
   searchContentLoad,
   goodsContentLoad,
-  addressLoad
+  addressLoad,
+  shoppingCartLoad
 } from "./store/sagas";
 
 const sagaMiddleware = createSagaMiddlreware();
@@ -30,7 +32,8 @@ const rootReducer = combineReducers({
   category: categoryReducer,
   search: searchReducer,
   goods: goodsReducer,
-  address: addressReducer
+  address: addressReducer,
+  cart: cartReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -44,6 +47,7 @@ sagaMiddleware.run(categoryPageLoad);
 sagaMiddleware.run(searchContentLoad);
 sagaMiddleware.run(goodsContentLoad);
 sagaMiddleware.run(addressLoad);
+sagaMiddleware.run(shoppingCartLoad);
 
 ReactDOM.render(
   <Provider store={store}>
