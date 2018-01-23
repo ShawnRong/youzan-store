@@ -1,11 +1,11 @@
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 //minimize js file
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 //autoprefixer
-const autoprefixer = require('autoprefixer')
-const webpack = require('webpack')
+const autoprefixer = require("autoprefixer");
+const webpack = require("webpack");
 
 module.exports = {
   context: path.resolve(process.cwd(), "src"),
@@ -13,9 +13,9 @@ module.exports = {
     app: "./index.js"
   },
   // devtool: 'cheap-module-eval-source-map',
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   devServer: {
-    contentBase: '.',
+    contentBase: ".",
     port: 1024,
     // compress: true
     historyApiFallback: true,
@@ -24,34 +24,34 @@ module.exports = {
   },
   watch: true,
   output: {
-    publicPath: '/dist',
+    publicPath: "/dist",
     path: path.resolve(process.cwd(), "dist"),
-    filename: "[name].js",
+    filename: "[name].js"
   },
   module: {
     rules: [
       {
         test: /\.(css|scss)$/,
         use: ExtractTextPlugin.extract({
-            fallback: "style-loader",
-            //compress css
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  minimize: true,
-                  url: false
-                }
-              },
-              {
-                loader: 'postcss-loader',
-                options: {
-                  ident: 'postcss',
-                  plugins: () => [autoprefixer]
-                }
-              },
-              { loader: 'sass-loader' },
-            ]
+          fallback: "style-loader",
+          //compress css
+          use: [
+            {
+              loader: "css-loader",
+              options: {
+                minimize: true,
+                url: false
+              }
+            },
+            {
+              loader: "postcss-loader",
+              options: {
+                ident: "postcss",
+                plugins: () => [autoprefixer]
+              }
+            },
+            { loader: "sass-loader" }
+          ]
         })
       },
       // {
@@ -62,19 +62,19 @@ module.exports = {
       //   }),
       // },
       {
-         test: /\.(js|jsx)$/,
-         exclude: /(node_modules|bower_components)/,
-         use: [
-           {
-             loader: 'babel-loader',
-             options: {
-               presets: [['env', {modules: false}]],
-             //   plugins: ['transform-class-properties'],
-               plugins: ["transform-object-rest-spread"]
-             }
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [["env", { modules: false }]],
+              //   plugins: ['transform-class-properties'],
+              plugins: ["transform-object-rest-spread"]
             }
-         ],
-      },
+          }
+        ]
+      }
       // {
       //   test: /\.(woff|woff2|eot|ttf|otf|svg|jpg|png)$/,
       //   use: [
@@ -91,8 +91,8 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: '[name].bundle.css',
-      allChunks: true,
+      filename: "[name].bundle.css",
+      allChunks: true
     }),
     // new HtmlWebpackPlugin({
     //   template: __dirname + './index.html',
@@ -103,4 +103,4 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
-}
+};

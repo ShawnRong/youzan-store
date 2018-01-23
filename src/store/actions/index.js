@@ -46,8 +46,14 @@ export {
 } from "./address.js";
 
 export {
-  fetchShoppiongCart,
+  fetchShoppingCart,
   fetchShoppingCartStart,
   fetchShoppingCartSuccess,
-  fetchShoppingCartFail
+  fetchShoppingCartFail,
+  addToShoppingCart,
+  removeFromShoppingCart,
+  selectAllProducts,
+  selectShopProducts,
+  selectProduct,
+  updateTotalPrice
 } from "./cart.js";
