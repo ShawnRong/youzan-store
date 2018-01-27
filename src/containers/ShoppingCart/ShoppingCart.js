@@ -7,6 +7,20 @@ import withBottomBar from "../../hoc/withBottomBar";
 import "./ShoppingCart.css";
 
 const shoppingCart = props => {
+  const calculateTotalPrice = shopList => {
+    let totalPrice = 0;
+    shopList.forEach(shop => {
+      totalPrice += Object.keys(shop.goodsList).reduce(
+        (acc, key) =>
+          (acc += shop.goodsList[key].selectToBuy
+            ? parseInt(shop.goodsList[key].price) *
+              parseInt(shop.goodsList[key].number)
+            : 0),
+        0
+      );
+    });
+    return totalPrice;
+  };
   return (
     <div className="container " style={{ minHeight: "581px" }}>
       <div className="content clearfix js-page-content">
@@ -82,7 +96,9 @@ const shoppingCart = props => {
                   className="js-total-price"
                   style={{ color: "rgb(255, 102, 0)" }}
                 >
-                  {props.goodsTotalPrice}
+                  {props.shoppingCart
+                    ? calculateTotalPrice(props.shoppingCart)
+                    : 0}
                 </span>
                 <p className="c-gray-dark">不含运费</p>
               </div>
@@ -96,7 +112,7 @@ const shoppingCart = props => {
                 href="javascript:;"
                 className="j-delete-goods btn font-size-14 btn-red"
               >
-                删除
+                结算
               </button>
             </div>
           </div>
@@ -108,7 +124,7 @@ const shoppingCart = props => {
 
 const mapStateToProps = state => {
   return {
-    goodsTotalPrice: state.cart.totalPrice,
+    shoppingCart: state.cart.shoppingCart,
     selectAll: state.cart.selectAll
   };
 };

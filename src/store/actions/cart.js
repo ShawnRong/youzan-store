@@ -68,3 +68,19 @@ export const updateTotalPrice = () => {
     type: actionTypes.updateTotalPrice
   };
 };
+
+export const addGoodsCount = (shopId, goodsId) => {
+  return {
+    type: actionTypes.ADD_GOODS_COUNT,
+    shopId: shopId,
+    goodsId: goodsId
+  };
+};
+
+export const minusGoodsCount = (shopId, goodsId) => {
+  return {
+    type: actionTypes.MINUS_GOODS_COUNT,
+    shopId: shopId,
+    goodsId: goodsId
+  };
+};

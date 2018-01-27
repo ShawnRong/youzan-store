@@ -100,6 +100,48 @@ const removeGoods = (shopList, shopId, goodsId) => {
     .filter(shop => shop !== null);
 };
 
+const minusGoodsCount = (shopList, shopId, goodsId) => {
+  return shopList.map(
+    shop =>
+      shop.shopId === shopId
+        ? {
+            ...shop,
+            goodsList: shop.goodsList.map(
+              good =>
+                good.id === goodsId
+                  ? {
+                      ...good,
+                      number: good.number - 1,
+                      selectToBuy:
+                        parseInt(good.number) == 0 ? false : good.selectToBuy
+                    }
+                  : good
+            )
+          }
+        : shop
+  );
+};
+
+const addGoodsCount = (shopList, shopId, goodsId) => {
+  return shopList.map(
+    shop =>
+      shop.shopId === shopId
+        ? {
+            ...shop,
+            goodsList: shop.goodsList.map(
+              good =>
+                good.id === goodsId
+                  ? {
+                      ...good,
+                      number: good.number + 1
+                    }
+                  : good
+            )
+          }
+        : shop
+  );
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_SHOPPING_CART_START:
@@ -150,6 +192,24 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         shoppingCart: toogleGoods(
+          state.shoppingCart,
+          action.shopId,
+          action.goodsId
+        )
+      };
+    case actionTypes.ADD_GOODS_COUNT:
+      return {
+        ...state,
+        shoppingCart: addGoodsCount(
+          state.shoppingCart,
+          action.shopId,
+          action.goodsId
+        )
+      };
+    case actionTypes.MINUS_GOODS_COUNT:
+      return {
+        ...state,
+        shoppingCart: minusGoodsCount(
           state.shoppingCart,
           action.shopId,
           action.goodsId

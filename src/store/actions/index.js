@@ -55,5 +55,7 @@ export {
   selectAllProducts,
   selectShopProducts,
   selectProduct,
-  updateTotalPrice
+  updateTotalPrice,
+  addGoodsCount,
+  minusGoodsCount
 } from "./cart.js";
