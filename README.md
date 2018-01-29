@@ -4,6 +4,8 @@
 
 2. `yarn start`
 
+3. [预览地址](https://youzan-qtbsxyxtae.now.sh) ps.由于免费第一次加载较慢
+
 # 功能
 
 * 首页 infinitescroller, ant-d carousel 组件
